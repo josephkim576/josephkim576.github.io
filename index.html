@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joseph Y. Kim — Materials &amp; Manufacturing Engineer</title>
+  <meta name="description" content="Portfolio of Joseph Y. Kim: Purdue Materials Science Engineering student (May 2028) with robotics, Formula SAE and leadership experience, targeting manufacturing engineering roles.">
+  <meta name="theme-color" content="#0a0e14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joseph Y. Kim — Materials &amp; Manufacturing Engineer">
+  <meta property="og:description" content="Purdue MSE '28 · Robotics intern · Formula SAE · Building a career in manufacturing engineering.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolygon points='32,4 58,18 58,46 32,60 6,46 6,18' fill='%230a0e14' stroke='%23e4b94a' stroke-width='4'/%3E%3Ctext x='32' y='40' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='%23e4b94a'%3EJK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Set theme before first paint (no flash) and flag that JS is available.
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        d.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joseph Y. Kim",
+    "jobTitle": "Materials Science Engineering Student",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Purdue University" },
+    "knowsAbout": ["Materials Science", "Manufacturing Engineering", "Robotics", "Formula SAE"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+  <div id="progress" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="Joseph Y. Kim, back to top">
+        <svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="none" stroke="currentColor" stroke-width="4"/><text x="32" y="40" font-family="Space Grotesk, Arial" font-size="22" font-weight="700" text-anchor="middle" fill="currentColor">JK</text></svg>
+        <span class="brand-name">Joseph Y. Kim</span>
+      </a>
+      <nav id="menu" class="menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-tools">
+        <button class="kbd-btn" id="openPalette" type="button" aria-label="Open command menu"><span class="mono" id="kbdLabel">Ctrl K</span></button>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle light and dark theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
+        </button>
+        <a class="btn btn-sm btn-primary nav-resume" href="#resume" data-resume>Resume</a>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="top" class="hero">
+      <canvas id="grain" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="status reveal"><span class="dot"></span> Seeking manufacturing engineering opportunities</p>
+          <p class="eyebrow mono reveal" style="--d:.05s">// HELLO, I'M</p>
+          <h1 class="reveal" style="--d:.1s">Joseph <span class="grad">Y. Kim</span></h1>
+          <p class="role-line reveal" style="--d:.18s">
+            <span class="sr-only">Materials science engineering student.</span>
+            <span aria-hidden="true">I'm a <span id="rotator" class="rotator">materials science engineer</span><span class="caret"></span></span>
+          </p>
+          <p class="pitch reveal" style="--d:.24s">
+            I connect how materials behave to how products get made. From robots to race cars, I like being where parts are designed, built, tested and improved.
+          </p>
+          <div class="cta-row reveal" style="--d:.3s">
+            <a class="btn btn-primary" href="#projects">See my projects
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn" href="#resume" data-resume>
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download resume
+            </a>
+          </div>
+          <ul class="socials reveal" style="--d:.36s">
+            <li><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg></a></li>
+            <li><a href="https://github.com/your-handle" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a></li>
+            <li><a href="mailto:your.name@purdue.edu" aria-label="Email"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          </ul>
+        </div>
+
+        <aside class="snapshot reveal" style="--d:.2s" aria-label="Recruiter snapshot">
+          <div class="snap-head mono"><span>RECRUITER SNAPSHOT</span><span>60-SEC SCAN</span></div>
+          <dl class="snap-list">
+            <div><dt>Target role</dt><dd>Manufacturing Engineering <span class="muted">(internship / co-op / new grad)</span></dd></div>
+            <div><dt>Education</dt><dd>B.S. Materials Science Engineering, Purdue University</dd></div>
+            <div><dt>Graduation</dt><dd>May 2028</dd></div>
+            <div><dt>Experience</dt><dd>Robotics Engineering Intern, HYRobotics <span class="muted">(St. Louis, Summer 2026)</span></dd></div>
+            <div><dt>Teams</dt><dd>Formula SAE Build Team</dd></div>
+            <div><dt>Leadership</dt><dd>Building Manager, Purdue Memorial Union</dd></div>
+            <div><dt>Fastest contact</dt><dd><a href="mailto:your.name@purdue.edu">your.name@purdue.edu</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+
+      <div class="wrap stats">
+        <div class="stat reveal"><span class="stat-num" data-count="3">3</span><span class="stat-label">hands-on roles across robotics, motorsport &amp; operations</span></div>
+        <div class="stat reveal" style="--d:.08s"><span class="stat-num">May '28</span><span class="stat-label">B.S. in Materials Science Engineering</span></div>
+        <div class="stat reveal" style="--d:.16s"><span class="stat-num">[##%]</span><span class="stat-label">[your headline metric, e.g. cycle time cut]</span></div>
+      </div>
+      <p class="hero-note mono" aria-hidden="true">grain-structure simulation · move your cursor</p>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <header class="sec-head reveal"><span class="sec-no mono">01</span><h2>About</h2><span class="sec-rule"></span><span class="sec-tag mono">SECTION A–A</span></header>
+        <div class="about-grid">
+          <figure class="avatar reveal">
+            <div class="avatar-frame">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="32" y="40" font-family="Space Grotesk, Arial" font-size="22" font-weight="700" text-anchor="middle" fill="currentColor">JK</text></svg>
+              <img src="assets/headshot.jpg" alt="Portrait of Joseph Y. Kim" onerror="this.remove()">
+            </div>
+            <figcaption class="mono">Purdue University · West Lafayette, IN</figcaption>
+          </figure>
+          <div class="about-copy">
+            <p class="lead reveal">I'm a materials science and engineering student at Purdue who wants to be where parts actually get made.</p>
+            <p class="reveal">This past summer I worked as a robotics engineering intern at HYRobotics in St. Louis. On campus I build with the Formula SAE team and manage operations as a building manager at the Purdue Memorial Union. My focus is manufacturing engineering: understanding why materials behave the way they do, then turning that into processes that are repeatable, safe and cost-effective.</p>
+            <div class="pillars">
+              <div class="card pillar reveal">
+                <span class="pillar-ico mono">01</span>
+                <h3>Materials-first thinking</h3>
+                <p>Polymers and structure–property relationships give me a lens for why parts perform or fail, and how processing changes the answer.</p>
+              </div>
+              <div class="card pillar reveal" style="--d:.08s">
+                <span class="pillar-ico mono">02</span>
+                <h3>Hands-on with real hardware</h3>
+                <p>Robotics at HYRobotics and race-car builds with Formula SAE: designing, assembling, testing, then iterating on what the data says.</p>
+              </div>
+              <div class="card pillar reveal" style="--d:.16s">
+                <span class="pillar-ico mono">03</span>
+                <h3>Dependable under responsibility</h3>
+                <p>Running a campus building takes scheduling, safety and people skills, the same habits that keep a production floor moving.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section id="achievements" class="section alt">
+      <div class="wrap">
+        <header class="sec-head reveal"><span class="sec-no mono">02</span><h2>Main achievements</h2><span class="sec-rule"></span><span class="sec-tag mono">SECTION B–B</span></header>
+        <div class="ach-grid">
+          <article class="card ach reveal">
+            <span class="ach-label mono">SUMMER 2026</span>
+            <h3>Robotics Engineering Intern, HYRobotics</h3>
+            <p>Contributed to robotics engineering work at a St. Louis robotics company. [Add one line of concrete impact.]</p>
+          </article>
+          <article class="card ach reveal" style="--d:.08s">
+            <span class="ach-label mono">BUILD TEAM</span>
+            <h3>Formula SAE Build Team</h3>
+            <p>Part of the student team that designs, builds and races a formula-style car to competition rules: a full engineering cycle under deadlines. [Add your subsystem or result.]</p>
+          </article>
+          <article class="card ach reveal" style="--d:.16s">
+            <span class="ach-label mono">LEADERSHIP</span>
+            <h3>Building Manager, Purdue Memorial Union</h3>
+            <p>Trusted with day-to-day responsibility for a central campus building. [Add scale: staff, events or hours managed.]</p>
+          </article>
+          <article class="card ach reveal">
+            <span class="ach-label mono">[AWARD]</span>
+            <h3>[Scholarship / Dean's List / competition result]</h3>
+            <p>[One line on what it was and why it matters.]</p>
+          </article>
+          <article class="card ach reveal" style="--d:.08s">
+            <span class="ach-label mono">[METRIC]</span>
+            <h3>[Your biggest quantified win]</h3>
+            <p>[e.g. Reduced X by Y%, saved $Z, or improved throughput by N units per hour.]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <header class="sec-head reveal"><span class="sec-no mono">03</span><h2>Projects</h2><span class="sec-rule"></span><span class="sec-tag mono">SECTION C–C</span></header>
+        <p class="sec-intro reveal">A few projects, each documented as a short case study: the problem, my role, the process and the result. Click any card for the full story.</p>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="chip-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip-btn" type="button" data-filter="robotics" aria-pressed="false">Robotics</button>
+          <button class="chip-btn" type="button" data-filter="motorsport" aria-pressed="false">Motorsport</button>
+          <button class="chip-btn" type="button" data-filter="materials" aria-pressed="false">Materials</button>
+          <button class="chip-btn" type="button" data-filter="manufacturing" aria-pressed="false">Manufacturing</button>
+        </div>
+
+        <div class="proj-grid" id="projGrid">
+          <!-- Project 1 -->
+          <article class="project card reveal" data-cat="robotics" data-id="hyrobotics">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" class="art" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="40" y="136" width="96" height="16" rx="3"/><path d="M88 136v-22"/>
+                  <circle cx="88" cy="106" r="10"/><path d="m95 99 56-42"/>
+                  <circle cx="157" cy="52" r="8"/><path d="m164 56 60 28"/>
+                  <circle cx="230" cy="87" r="6"/><path d="m234 91 20 22m-20-22 30-8"/>
+                </g>
+                <g class="dim"><path d="M40 168h96M40 163v10M136 163v10"/><text x="88" y="162" text-anchor="middle">240</text></g>
+              </svg>
+              <img class="photo" src="assets/projects/hyrobotics.jpg" alt="" onerror="this.remove()">
+            </div>
+            <div class="proj-body">
+              <div class="proj-meta mono"><span>Robotics</span><span>Summer 2026</span></div>
+              <h3>HYRobotics: [project name]</h3>
+              <p>[One sentence: what you built or improved and the outcome.]</p>
+              <ul class="chips"><li class="chip ph">[tool]</li><li class="chip ph">[tool]</li><li class="chip ph">[tool]</li></ul>
+              <button class="proj-open" type="button" aria-label="Open case study: HYRobotics">View case study <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project card reveal" data-cat="motorsport" data-id="fsae" style="--d:.08s">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" class="art" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+                  <path d="M72 90 112 80H228l34 10-34 10H112Z"/>
+                  <rect x="94" y="52" width="36" height="20" rx="4"/><rect x="94" y="108" width="36" height="20" rx="4"/>
+                  <rect x="204" y="54" width="30" height="18" rx="4"/><rect x="204" y="108" width="30" height="18" rx="4"/>
+                  <path d="M60 68v44M272 74v32M150 90h42"/>
+                </g>
+                <g class="dim"><path d="M72 150h190M72 145v10M262 145v10"/><text x="167" y="144" text-anchor="middle">L 1600</text></g>
+              </svg>
+              <img class="photo" src="assets/projects/fsae.jpg" alt="" onerror="this.remove()">
+            </div>
+            <div class="proj-body">
+              <div class="proj-meta mono"><span>Motorsport</span><span>Formula SAE</span></div>
+              <h3>Formula SAE: [subsystem you worked on]</h3>
+              <p>[One sentence: what you designed or built and how it performed.]</p>
+              <ul class="chips"><li class="chip ph">[tool]</li><li class="chip ph">[tool]</li><li class="chip ph">[tool]</li></ul>
+              <button class="proj-open" type="button" aria-label="Open case study: Formula SAE">View case study <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project card reveal" data-cat="materials" data-id="materials">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" class="art" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+                  <path d="m30 62 30 30 30-30 30 30 30-30 30 30 30-30 30 30 30-30"/>
+                  <path d="m30 118 30 30 30-30 30 30 30-30 30 30 30-30 30 30 30-30"/>
+                  <path stroke-dasharray="3 5" d="M90 92v26M150 92v26M210 92v26M270 92v26"/>
+                </g>
+                <g fill="currentColor"><circle cx="60" cy="92" r="4"/><circle cx="120" cy="92" r="4"/><circle cx="180" cy="92" r="4"/><circle cx="240" cy="92" r="4"/><circle cx="90" cy="118" r="4"/><circle cx="150" cy="118" r="4"/><circle cx="210" cy="118" r="4"/><circle cx="270" cy="118" r="4"/></g>
+                <g class="dim"><text x="160" y="170" text-anchor="middle">CROSS-LINKED POLYMER NETWORK</text></g>
+              </svg>
+              <img class="photo" src="assets/projects/materials.jpg" alt="" onerror="this.remove()">
+            </div>
+            <div class="proj-body">
+              <div class="proj-meta mono"><span>Materials</span><span>Coursework / lab</span></div>
+              <h3>[Materials or polymers project title]</h3>
+              <p>[One sentence: the question you investigated, the method and what you found.]</p>
+              <ul class="chips"><li class="chip ph">[method]</li><li class="chip ph">[equipment]</li><li class="chip ph">[software]</li></ul>
+              <button class="proj-open" type="button" aria-label="Open case study: materials project">View case study <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project card reveal" data-cat="manufacturing" data-id="manufacturing" style="--d:.08s">
+            <div class="thumb">
+              <svg viewBox="0 0 320 180" class="art" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <circle cx="130" cy="88" r="46" stroke-width="12" stroke-dasharray="9 7.05"/>
+                  <circle cx="130" cy="88" r="34"/><circle cx="130" cy="88" r="10"/>
+                  <path d="M130 54v24M130 98v24M96 88h24M140 88h24"/>
+                  <circle cx="226" cy="124" r="24" stroke-width="8" stroke-dasharray="8 7.1"/>
+                  <circle cx="226" cy="124" r="16"/><circle cx="226" cy="124" r="5"/>
+                </g>
+                <g class="dim"><path d="M84 156h92M84 151v10M176 151v10"/><text x="130" y="150" text-anchor="middle">Ø 92</text></g>
+              </svg>
+              <img class="photo" src="assets/projects/manufacturing.jpg" alt="" onerror="this.remove()">
+            </div>
+            <div class="proj-body">
+              <div class="proj-meta mono"><span>Manufacturing</span><span>Process / DFM</span></div>
+              <h3>[Manufacturing or process-improvement project]</h3>
+              <p>[One sentence: the process you improved or the part you made, and the measurable gain.]</p>
+              <ul class="chips"><li class="chip ph">[process]</li><li class="chip ph">[tool]</li><li class="chip ph">[metric]</li></ul>
+              <button class="proj-open" type="button" aria-label="Open case study: manufacturing project">View case study <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESUME ============ -->
+    <section id="resume" class="section alt">
+      <div class="wrap">
+        <header class="sec-head reveal"><span class="sec-no mono">04</span><h2>Resume</h2><span class="sec-rule"></span><span class="sec-tag mono">SECTION D–D</span></header>
+        <div class="resume-actions reveal">
+          <a class="btn btn-primary" href="#resume" data-resume>
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download PDF
+          </a>
+          <span class="mono muted">Last updated [Month Year]</span>
+        </div>
+
+        <div class="resume-doc reveal">
+          <header class="rd-head">
+            <h3>Joseph Y. Kim</h3>
+            <p class="rd-sub">Materials Science Engineering · Purdue University · Targeting manufacturing engineering roles</p>
+            <p class="rd-contact mono"><a href="mailto:your.name@purdue.edu">your.name@purdue.edu</a><span>·</span><a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">linkedin.com/in/your-handle</a><span>·</span><a href="https://github.com/your-handle" target="_blank" rel="noopener">github.com/your-handle</a></p>
+          </header>
+
+          <div class="rd-grid">
+            <div class="rd-main">
+              <h4 class="rd-title mono">EXPERIENCE</h4>
+              <ol class="timeline">
+                <li>
+                  <div class="tl-head"><h5>Robotics Engineering Intern</h5><span class="mono">Summer 2026</span></div>
+                  <p class="tl-org">HYRobotics · St. Louis, MO</p>
+                  <ul>
+                    <li>[Action verb + what you built, tested or improved, with a result, e.g. cut assembly time 20%].</li>
+                    <li>[Hardware, tools or software you used, and what it let you achieve].</li>
+                    <li>[Who you collaborated with and what you delivered].</li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="tl-head"><h5>Build Team Member</h5><span class="mono">[Start year] – Present</span></div>
+                  <p class="tl-org">Formula SAE Build Team · [Team name]</p>
+                  <ul>
+                    <li>[Subsystem or component you own, and what you designed or manufactured].</li>
+                    <li>[A test, iteration or competition result that shows impact].</li>
+                    <li>[Teamwork, schedule or budget responsibility].</li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="tl-head"><h5>Building Manager</h5><span class="mono">[Start year] – Present</span></div>
+                  <p class="tl-org">Purdue Memorial Union · West Lafayette, IN</p>
+                  <ul>
+                    <li>[Scope: people supervised, events or hours covered].</li>
+                    <li>[A process you improved or a problem you resolved].</li>
+                    <li>[Safety, reliability or customer-service outcome].</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+
+            <aside class="rd-side">
+              <h4 class="rd-title mono">EDUCATION</h4>
+              <div class="edu">
+                <h5>Purdue University</h5>
+                <p>B.S., Materials Science Engineering</p>
+                <p class="mono muted">Expected May 2028 · GPA [X.XX]</p>
+              </div>
+
+              <h4 class="rd-title mono">COURSEWORK</h4>
+              <ul class="chips"><li class="chip">Polymers (MSE 420)</li><li class="chip ph">[course]</li><li class="chip ph">[course]</li></ul>
+
+              <h4 class="rd-title mono">SKILLS</h4>
+              <p class="skill-group">Materials</p>
+              <ul class="chips"><li class="chip">Polymer science</li><li class="chip">Structure–property</li><li class="chip ph">Mechanical testing</li><li class="chip ph">Microscopy</li></ul>
+              <p class="skill-group">Design &amp; manufacturing</p>
+              <ul class="chips"><li class="chip ph">CAD (SolidWorks)</li><li class="chip ph">GD&amp;T</li><li class="chip ph">DFM</li><li class="chip ph">3D printing</li><li class="chip ph">Machining</li></ul>
+              <p class="skill-group">Robotics &amp; software</p>
+              <ul class="chips"><li class="chip ph">Python</li><li class="chip ph">MATLAB</li><li class="chip ph">Embedded / Arduino</li><li class="chip ph">ROS</li></ul>
+              <p class="skill-group">Professional</p>
+              <ul class="chips"><li class="chip">Team leadership</li><li class="chip">Safety &amp; operations</li><li class="chip ph">Technical writing</li></ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <header class="sec-head reveal"><span class="sec-no mono">05</span><h2>Contact</h2><span class="sec-rule"></span><span class="sec-tag mono">SECTION E–E</span></header>
+        <div class="contact-box reveal">
+          <h2 class="big">Let's build something <span class="grad">that ships.</span></h2>
+          <p>I'm looking for [internship / co-op / full-time] manufacturing engineering roles starting [Summer 2027]. If you're building real hardware and want someone who learns fast and finishes what they start, I'd love to talk.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:your.name@purdue.edu">Email me</a>
+            <button class="btn" type="button" id="copyEmail">Copy email</button>
+            <a class="btn" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER (drawing title block) ============ -->
+  <footer class="titleblock">
+    <div class="wrap tb-grid mono">
+      <div><span>DRAWN BY</span><b>J. Y. KIM</b></div>
+      <div><span>TITLE</span><b>ENGINEERING PORTFOLIO</b></div>
+      <div><span>SCALE</span><b>1:1</b></div>
+      <div><span>SHEET</span><b>1 OF 1</b></div>
+      <div><span>REV</span><b>A · <span id="year">2026</span></b></div>
+    </div>
+    <p class="wrap tb-note">Built with plain HTML, CSS and JavaScript · hosted on GitHub Pages · press <kbd id="kbdFoot">Ctrl K</kbd> to jump anywhere</p>
+  </footer>
+
+  <!-- ============ PROJECT DIALOG ============ -->
+  <dialog id="projDialog" aria-labelledby="pdTitle">
+    <div class="pd">
+      <button class="pd-close" type="button" id="pdClose" aria-label="Close case study">×</button>
+      <div class="pd-art" id="pdArt"></div>
+      <div class="pd-body">
+        <p class="mono pd-meta" id="pdMeta"></p>
+        <h3 id="pdTitle"></h3>
+        <dl class="pd-facts" id="pdFacts"></dl>
+        <div id="pdContent"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============ COMMAND PALETTE ============ -->
+  <dialog id="palette" aria-label="Command menu">
+    <div class="pal">
+      <input id="palInput" type="text" placeholder="Jump to a section or run an action…" autocomplete="off" aria-label="Search commands">
+      <ul id="palList" role="listbox"></ul>
+      <p class="pal-hint mono">↑↓ navigate · Enter select · Esc close</p>
+    </div>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
