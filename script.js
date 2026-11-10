@@ -36,7 +36,7 @@
       ],
       results: [
         'With a target von mises stress reduction of atleast 10% on the components, was successcully able to achieve that tagrget for 17/22 gripppers designed',
-        'Out of the 17 designed components, 13 were integrated into the collaboration robot toolkit'
+        'Out of the 17 designed components, the 13 that passed the design constraints as the 1,200 cycles were integrated into the collaboration robot toolkit'
       ],
       tools: ['CAD / FEA / Autodesk Fusion / OnShape', 'Microsoft Excel',]
     },
