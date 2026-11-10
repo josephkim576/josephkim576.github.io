@@ -26,20 +26,19 @@
       short: 'HYRobotics internship',
       cat: 'Robotics',
       period: 'Summer 2026',
-      title: 'HYRobotics: [project name]',
-      facts: [['Role', 'Robotics Engineering Intern'], ['Company', 'HYRobotics, St. Louis, MO'], ['Timeframe', 'Summer 2026']],
-      problem: '[What problem or goal were you given? What was slow, failing or missing, and why did it matter to the team?]',
+      title: 'HYRobotics: 3D Design Project',
+      facts: [['Role', 'Mechanical Design Intern'], ['Company', 'HYRobotics, St. Louis, MO'], ['Timeframe', 'Summer 2026']],
+      problem: 'Design collaborative-robot arm components and end-of-arm gripper tooling that can sort small, molded-in threaded inserts and survive atleast 1,200 repeated cycles without wearing out, while costing less than the existing steel tooling.',
       approach: [
-        '[Step 1: how you scoped or researched the problem]',
-        '[Step 2: what you designed, built or tested, and with which tools]',
-        '[Step 3: how you iterated based on test data or feedback]'
+        'Step 1: Produced a design matrix of possible prototypes, covering dimensions, geometry and application.',
+        'Step 2: Eliminated redundant or impractical designs based on size, cost, and manufacturing repeatability.',
+        'Step 3: Drew basic design on 2D sketch with Onshape, with a 3D design follow on Autodesk. After conducting preliminary FEA on the created models, modified the design by decreasing cross-sectional area as well as adding chamfers and fillets in order to increase yield strength and lower von mises stress on the component.'
       ],
       results: [
-        '[Quantified result, e.g. reduced cycle time by X% or improved reliability to Y]',
-        '[What the team adopted or shipped because of your work]'
+        'With a target von mises stress reduction of atleast 10% on the components, was successcully able to achieve that tagrget for 17/22 gripppers designed',
+        'Out of the 17 designed components, 13 were integrated into the collaboration robot toolkit'
       ],
-      tools: ['[CAD / EDA tool]', '[Programming language]', '[Test equipment]'],
-      reflect: '[One honest thing that broke or surprised you, and what you would do differently next time.]'
+      tools: ['CAD / FEA / Autodesk Fusion / OnShape', 'Microsoft Excel',]
     },
     fsae: {
       short: 'Formula SAE',
